@@ -1,0 +1,8 @@
+# Node
+node_modules/
+.env
+.DS_Store
+npm-debug.log*
+yarn-error.log*
+README.dev.md
+.github/copilot-instructions.md

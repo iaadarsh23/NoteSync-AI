@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NoteSync-AI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>NoteSync-AI</h1>
+    <p>Paste meeting notes or upload a .txt file to summarize.</p>
+  </header>
+
+  <main>
+    <section class="input">
+      <textarea id="notes" placeholder="Paste meeting transcript or notes here…" rows="12"></textarea>
+      <div class="controls">
+        <input type="file" id="file" accept=".txt" />
+        <button id="summarize">Summarize</button>
+      </div>
+    </section>
+
+    <section class="output" id="output" hidden>
+      <h2>Summary</h2>
+      <div id="summary-overview"></div>
+      <div class="columns">
+        <div>
+          <h3>Action Items</h3>
+          <ul id="summary-actions"></ul>
+        </div>
+        <div>
+          <h3>Decisions</h3>
+          <ul id="summary-decisions"></ul>
+        </div>
+        <div>
+          <h3>Topics</h3>
+          <ul id="summary-topics"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/" aria-label="Reload">Reload</a>
+  </footer>
+
+  <script src="/main.js" type="module"></script>
+</body>
+</html>
